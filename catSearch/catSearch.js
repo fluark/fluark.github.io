@@ -1,6 +1,6 @@
 
 const cats = [
-    "Porkchop: Ben",
+    "Porkchop: Ben: /catSearch/catPics/porkchop.jpg",
     "Foley: Gideon",
     "Chicken: Eva",
     "Chalupa: Andi",
@@ -34,6 +34,12 @@ function handleSearch(){
         if (splitCat[0].toLowerCase() === searchName){
             para.textContent = `${splitCat[0]}'s owner is
             ${splitCat[1]}.`;
+
+            if (splitCat[2]){
+                const imageElement = document.createElement("img");
+                imageElement.width = 200; 
+            }
+
             return;
         }
     }
