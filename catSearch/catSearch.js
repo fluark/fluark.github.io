@@ -1,6 +1,6 @@
 
-const cats = [
-    "Porkchop: Ben: /catSearch/catPics/porkchop.jpg",
+ const cats = [
+    "Porkchop: Ben: catPics/porkchop.jpg",
     "Foley: Gideon",
     "Chicken: Eva",
     "Chalupa: Andi",
@@ -10,11 +10,13 @@ const cats = [
     "Fig: Glenn",
     "Ava: Glenn",
     "Ollie: Lucy",
-];
+]; 
 
-const para = document.querySelector("p");
+
+const para = document.querySelector("#catInfo");
 const input = document.querySelector("input");
 const btn = document.querySelector("button");
+
 
 btn.addEventListener("click", handleSearch);
  document.addEventListener("keypress", function(event){
@@ -29,6 +31,7 @@ function handleSearch(){
     input.focus();
     para.textContent = "";
 
+    
     for (const cat of cats){
         const splitCat = cat.split(":");
         if (splitCat[0].toLowerCase() === searchName){
@@ -37,7 +40,11 @@ function handleSearch(){
 
             if (splitCat[2]){
                 const imageElement = document.createElement("img");
+                imageElement.src = splitCat[2];
                 imageElement.width = 200; 
+                imageContainer.innerHTML = "";
+                imageContainer.appendChild(imageElement);
+                console.log("Image appended:", splitCat[2]);
             }
 
             return;
