@@ -5,7 +5,7 @@
     "Chicken: Eva: catPics/chicken.jpg",
     "Chalupa: Andi: catPics/chalupa.jpg",
     "Lily: Deni: catPics/lily.jpg",
-    "Dophi: Josiah: catPics/dophi.jpg",
+    "Doffy: Josiah: catPics/dophi.jpg",
     "Piper: Olga: catPics/piper.jpg",
     "Fig: Glenn: catPics/fig.jpg",
     "Ava: Glenn: catPics/ava.jpg",

@@ -1,3 +1,17 @@
-body {
-    border: 1px solid green;
+/*body {
+
 }
+
+#flexContainer {
+    display: flex;
+    flex-direction: column;
+    border: 2px dashed blue;
+}
+
+
+
+#imageContainer {
+    border: 1px solid red;
+
+}
+
