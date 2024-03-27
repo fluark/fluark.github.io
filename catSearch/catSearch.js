@@ -1,6 +1,6 @@
 
  const cats = [
-    "Porkchop: Ben: catPics/porkchop.jpg",
+    "Porkchop",
     "Foley: Gideon: catPics/foley.jpg",
     "Chicken: Eva: catPics/chicken.jpg",
     "Chalupa: Andi: catPics/chalupa.jpg",
@@ -27,12 +27,14 @@ btn.addEventListener("click", handleSearch);
 
 function handleSearch(){
     const searchName = input.value.toLowerCase();
-    input.value = "";
-    input.focus();
-    para.textContent = "";
+    if (searchName ==="porkchop") {
+        const porkchopCard = document.getElementById("porkCard");
+        porkchopCard.style.display = "block";
+    } else {
+        container.innerHTML = "Cat not found"; 
+    }
 
-    
-    for (const cat of cats){
+    /*for (const cat of cats){
         const splitCat = cat.split(":");
         if (splitCat[0].toLowerCase() === searchName){
             para.textContent = `${splitCat[0]}'s owner is
@@ -45,11 +47,14 @@ function handleSearch(){
                 imageContainer.innerHTML = "";
                 imageContainer.appendChild(imageElement);
                 console.log("Image appended:", splitCat[2]);
+
+                
             }
 
-            return;
+            return; 
         }
-    }
-        para.textContent = "Cat not found";
-    }
+    }*/
+}
+      
+    
 
